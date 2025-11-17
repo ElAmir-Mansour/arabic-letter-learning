@@ -677,10 +677,8 @@
             userStroke = [];
             feedbackPanel.innerHTML = '🎯 جاهز للكتابة!';
             feedbackPanel.className = 'w-full min-h-[6rem] h-auto bg-gray-100 p-4 rounded-lg flex flex-col items-center justify-center text-center font-medium text-gray-700 transition-all';
-            
-            // Reset animation so user can replay it
-            resetAnimation();
-        }
+            resetAnimation(); 
+                }
         
         function resetAnimation() {
             const paths = document.querySelectorAll('.letter-stroke-demo');
@@ -730,7 +728,7 @@
             isAnimating = true;
             console.log('Starting animation');
             
-            speak('شاهد طريقة الكتابة', 'ar-SA');
+            speak('شاهِدْ طَرِيقةْ الكتابةْ', 'ar-SA');
             let totalDelay = 0;
             paths.forEach((path) => {
                 const pathLength = path.getTotalLength();
