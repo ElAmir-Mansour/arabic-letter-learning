@@ -677,6 +677,19 @@
             userStroke = [];
             feedbackPanel.innerHTML = '🎯 جاهز للكتابة!';
             feedbackPanel.className = 'w-full min-h-[6rem] h-auto bg-gray-100 p-4 rounded-lg flex flex-col items-center justify-center text-center font-medium text-gray-700 transition-all';
+            
+            // Reset animation so user can replay it
+            resetAnimation();
+        }
+        
+        function resetAnimation() {
+            const paths = document.querySelectorAll('.letter-stroke-demo');
+            paths.forEach(path => {
+                const pathLength = path.getTotalLength();
+                path.style.transition = 'none';
+                path.style.strokeDashoffset = pathLength;
+                path.style.strokeDasharray = pathLength;
+            });
         }
 
         // --- EVENT LISTENERS & INITIALIZATION ---
@@ -687,14 +700,14 @@
             const paths = document.querySelectorAll('.letter-stroke-demo');
             const firstPath = paths[0];
             if (firstPath && firstPath.style.strokeDashoffset === '0' && !isAnimating) {
-                speak('الحرف مرسوم بالفعل', 'ar-SA'); // "Letter already drawn"
+                speak('لإعادة المشاهدة، اضغط مسح ثم شاهد', 'ar-SA'); // "To replay, click Clear then Watch"
                 return;
             }
             
             if (isAnimating) return; // Prevent multiple animations
             isAnimating = true;
             
-            speak('شاهد طريقة الكتابة', 'ar-SA');
+            speak('شاهِدْ طريقةْ الكِتَابة', 'ar-SA');
             let totalDelay = 0;
             paths.forEach((path) => {
                 const pathLength = path.getTotalLength();
