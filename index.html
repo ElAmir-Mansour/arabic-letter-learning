@@ -228,6 +228,48 @@
         </div>
     </div>
 
+    <!-- Welcome Modal -->
+    <div id="welcome-modal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50" style="backdrop-filter: blur(8px);">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl" style="background: linear-gradient(135deg, #ffffff 0%, #faf9f7 100%); border: 3px solid #B85253;">
+            <div class="text-center mb-6">
+                <div class="text-6xl mb-4">👋</div>
+                <h2 class="text-3xl font-bold mb-2" style="color: #B85253;">مرحباً بك!</h2>
+                <p class="text-lg" style="color: #576B7C;">ما اسمك حتى نتعرف عليك؟</p>
+            </div>
+            
+            <form id="welcome-form" class="space-y-4">
+                <div>
+                    <label for="user-name" class="block text-right font-bold mb-2" style="color: #2c2c2c;">
+                        الاسم:
+                    </label>
+                    <input 
+                        type="text" 
+                        id="user-name" 
+                        name="userName"
+                        class="w-full px-4 py-3 text-lg rounded-lg border-2 text-right"
+                        style="border-color: #BDBAB2; background: white;"
+                        placeholder="اكتب اسمك هنا..."
+                        required
+                        autocomplete="off"
+                        maxlength="20"
+                    >
+                </div>
+                
+                <button 
+                    type="submit" 
+                    class="w-full py-4 text-xl font-bold rounded-lg transition-all transform hover:scale-105 shadow-lg"
+                    style="background: linear-gradient(135deg, #B85253 0%, #9a4344 100%); color: white;"
+                >
+                    ابدأ التعلم! 🚀
+                </button>
+            </form>
+            
+            <p class="text-xs text-center mt-4" style="color: #BDBAB2;">
+                سنستخدم اسمك لتخصيص تجربتك 💫
+            </p>
+        </div>
+    </div>
+
     <script src="script.js" defer></script>
 
 </body>

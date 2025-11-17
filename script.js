@@ -30,6 +30,7 @@
         let isDrawing = false;
         let userStroke = [];
         let glyphDatabase = null;
+        let userName = localStorage.getItem('userName') || '';
         
         // --- GAMIFICATION STATE ---
         let userProgress = loadProgress();
@@ -178,7 +179,16 @@
             // Cancel any ongoing speech
             speechSynth.cancel();
             
-            const utterance = new SpeechSynthesisUtterance(text);
+            // Personalize with user's name if available
+            let personalizedText = text;
+            if (userName && lang.startsWith('ar')) {
+                // Add name for encouragement messages
+                if (text.includes('ممتاز') || text.includes('جيد') || text.includes('رائع')) {
+                    personalizedText = `${text} يا ${userName}`;
+                }
+            }
+            
+            const utterance = new SpeechSynthesisUtterance(personalizedText);
             utterance.lang = lang;
             utterance.rate = 0.8;
             utterance.pitch = 1.0;
@@ -857,6 +867,38 @@
             // Update progress UI on load (after glyphDatabase is loaded)
             if (glyphDatabase) {
                 updateProgressUI();
+            }
+            
+            // --- WELCOME MODAL ---
+            const welcomeModal = document.getElementById('welcome-modal');
+            const welcomeForm = document.getElementById('welcome-form');
+            const userNameInput = document.getElementById('user-name');
+            
+            // Show welcome modal if user hasn't set their name
+            if (!userName && welcomeModal) {
+                welcomeModal.classList.remove('hidden');
+                setTimeout(() => userNameInput?.focus(), 300);
+            }
+            
+            // Handle welcome form submission
+            if (welcomeForm) {
+                welcomeForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = userNameInput.value.trim();
+                    
+                    if (name) {
+                        userName = name;
+                        localStorage.setItem('userName', userName);
+                        
+                        // Hide modal with animation
+                        welcomeModal.classList.add('hidden');
+                        
+                        // Personalized greeting
+                        setTimeout(() => {
+                            speak(`أهلاً وسهلاً ${userName}! مستعد لتعلم الحروف؟`, 'ar-SA');
+                        }, 500);
+                    }
+                });
             }
         }, 0);
     });
