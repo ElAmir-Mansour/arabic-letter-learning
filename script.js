@@ -696,8 +696,12 @@
                 }, totalDelay);
                 totalDelay += duration;
             });
+            // Keep the letter visible after animation completes
             setTimeout(() => {
-                paths.forEach(path => path.classList.remove('draw'));
+                paths.forEach(path => {
+                    path.style.strokeDashoffset = '0'; // Keep fully drawn
+                    path.style.transition = 'none'; // Remove transition
+                });
             }, totalDelay + 500);
         });
 
