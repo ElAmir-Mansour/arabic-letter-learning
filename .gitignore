@@ -1,0 +1,40 @@
+# Backup files
+*-backup.js
+*-backup.json
+*-backup-*.js
+*-backup-*.json
+*-old.json
+*-broken.json
+*-fixed-*.js
+*-fixed-*.json
+*-current.json
+*.bak
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and PIDs
+*.log
+*.pid
+server.log
+server.pid
+test-server.pid
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Test files
+test-*.html
+
+# Node modules (if you add any later)
+node_modules/
+
+# Environment variables
+.env
+.env.local

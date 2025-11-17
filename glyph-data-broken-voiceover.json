@@ -1,0 +1,1502 @@
+{
+  "U+0621": {
+    "char": "ء",
+    "name": "Hamza",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 32 38 A 8 8 0 0 0 32 54",
+          "M 20 54 L 37 54"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      }
+    }
+  },
+  "U+0623": {
+    "char": "أ",
+    "name": "Alef with Hamza Above",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 50 30 V 90",
+          "M 42 18 A 8 8 0 0 0 42 34",
+          "M 30 34 L 47 34"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "final": {
+        "rasm": [
+          "M 50 30 V 90",
+          "M 42 18 A 8 8 0 0 0 42 34",
+          "M 30 34 L 47 34"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0624": {
+    "char": "ؤ",
+    "name": "Waw with Hamza",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 60 30 C 75 30, 75 45, 60 45 C 45 45, 45 30, 60 30 M 60 45 C 50 75, 30 80, 20 70",
+          "M 52 18 A 8 8 0 0 0 52 34",
+          "M 40 34 L 57 34"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "final": {
+        "rasm": [
+          "M 90 45 H 70 M 60 30 C 75 30, 75 45, 60 45 C 45 45, 45 30, 60 30 M 60 45 C 50 75, 30 80, 20 70",
+          "M 52 18 A 8 8 0 0 0 52 34",
+          "M 40 34 L 57 34"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0625": {
+    "char": "إ",
+    "name": "Alef with Hamza Below",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 50 10 V 70",
+          "M 42 78 A 8 8 0 0 0 42 94",
+          "M 30 94 L 47 94"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "final": {
+        "rasm": [
+          "M 50 10 V 70",
+          "M 42 78 A 8 8 0 0 0 42 94",
+          "M 30 94 L 47 94"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0626": {
+    "char": "ئ",
+    "name": "Yeh with Hamza",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 80 70 C 70 85, 40 85, 30 70",
+          "M 47 58 A 8 8 0 0 0 47 74",
+          "M 35 74 L 52 74"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 80 70 C 70 85, 40 85, 30 70 H 10",
+          "M 47 58 A 8 8 0 0 0 47 74",
+          "M 35 74 L 52 74"
+        ],
+        "nuqat": [],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 70 H 70 C 65 85, 45 85, 40 70 H 10",
+          "M 47 58 A 8 8 0 0 0 47 74",
+          "M 35 74 L 52 74"
+        ],
+        "nuqat": [],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 70 H 70 C 60 85, 30 85, 20 70",
+          "M 37 58 A 8 8 0 0 0 37 74",
+          "M 25 74 L 42 74"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0627": {
+    "char": "ا",
+    "name": "Alif",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 50 20 V 80"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "final": {
+        "rasm": [
+          "M 50 20 V 80"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0628": {
+    "char": "ب",
+    "name": "Ba",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 80 70 C 70 85, 40 85, 30 70"
+        ],
+        "nuqat": [
+          [
+            55,
+            85
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 80 70 C 70 85, 40 85, 30 70 H 10"
+        ],
+        "nuqat": [
+          [
+            55,
+            85
+          ]
+        ],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 70 H 70 C 65 85, 45 85, 40 70 H 10"
+        ],
+        "nuqat": [
+          [
+            55,
+            85
+          ]
+        ],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 70 H 70 C 60 85, 30 85, 20 70"
+        ],
+        "nuqat": [
+          [
+            45,
+            85
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0629": {
+    "char": "ة",
+    "name": "Teh Marbuta",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 50 30 C 75 30, 75 70, 50 70 C 25 70, 25 30, 50 30"
+        ],
+        "nuqat": [
+          [
+            45,
+            20
+          ],
+          [
+            55,
+            20
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "final": {
+        "rasm": [
+          "M 90 80 H 70 C 70 60, 80 50, 70 50"
+        ],
+        "nuqat": [
+          [
+            65,
+            40
+          ],
+          [
+            75,
+            40
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+062A": {
+    "char": "ت",
+    "name": "Ta",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 80 70 C 70 85, 40 85, 30 70"
+        ],
+        "nuqat": [
+          [
+            50,
+            60
+          ],
+          [
+            60,
+            60
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 80 70 C 70 85, 40 85, 30 70 H 10"
+        ],
+        "nuqat": [
+          [
+            50,
+            60
+          ],
+          [
+            60,
+            60
+          ]
+        ],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 70 H 70 C 65 85, 45 85, 40 70 H 10"
+        ],
+        "nuqat": [
+          [
+            50,
+            60
+          ],
+          [
+            60,
+            60
+          ]
+        ],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 70 H 70 C 60 85, 30 85, 20 70"
+        ],
+        "nuqat": [
+          [
+            45,
+            60
+          ],
+          [
+            55,
+            60
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+062B": {
+    "char": "ث",
+    "name": "Tha",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 80 70 C 70 85, 40 85, 30 70"
+        ],
+        "nuqat": [
+          [
+            55,
+            55
+          ],
+          [
+            45,
+            60
+          ],
+          [
+            65,
+            60
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 80 70 C 70 85, 40 85, 30 70 H 10"
+        ],
+        "nuqat": [
+          [
+            55,
+            55
+          ],
+          [
+            45,
+            60
+          ],
+          [
+            65,
+            60
+          ]
+        ],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 70 H 70 C 65 85, 45 85, 40 70 H 10"
+        ],
+        "nuqat": [
+          [
+            55,
+            55
+          ],
+          [
+            45,
+            60
+          ],
+          [
+            65,
+            60
+          ]
+        ],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 70 H 70 C 60 85, 30 85, 20 70"
+        ],
+        "nuqat": [
+          [
+            50,
+            55
+          ],
+          [
+            40,
+            60
+          ],
+          [
+            60,
+            60
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+062C": {
+    "char": "ج",
+    "name": "Jeem",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 75 40 C 70 30, 50 30, 45 40",
+          "M 60 35 C 20 40, 10 90, 50 80 C 80 75, 75 50, 60 35"
+        ],
+        "nuqat": [
+          [
+            50,
+            65
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 80 50 C 70 40, 50 40, 45 50 H 10"
+        ],
+        "nuqat": [
+          [
+            60,
+            65
+          ]
+        ],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 50 H 80 C 70 40, 50 40, 45 50 H 10"
+        ],
+        "nuqat": [
+          [
+            60,
+            65
+          ]
+        ],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 50 H 80 C 70 40, 50 40, 45 50 C 10 50, 10 90, 50 80 C 80 75, 90 50, 90 50"
+        ],
+        "nuqat": [
+          [
+            50,
+            65
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+062D": {
+    "char": "ح",
+    "name": "Hah",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 75 40 C 70 30, 50 30, 45 40",
+          "M 60 35 C 20 40, 10 90, 50 80 C 80 75, 75 50, 60 35"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 80 50 C 70 40, 50 40, 45 50 H 10"
+        ],
+        "nuqat": [],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 50 H 80 C 70 40, 50 40, 45 50 H 10"
+        ],
+        "nuqat": [],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 50 H 80 C 70 40, 50 40, 45 50 C 10 50, 10 90, 50 80 C 80 75, 90 50, 90 50"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+062E": {
+    "char": "خ",
+    "name": "Khah",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 75 40 C 70 30, 50 30, 45 40",
+          "M 60 35 C 20 40, 10 90, 50 80 C 80 75, 75 50, 60 35"
+        ],
+        "nuqat": [
+          [
+            60,
+            25
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 80 50 C 70 40, 50 40, 45 50 H 10"
+        ],
+        "nuqat": [
+          [
+            60,
+            35
+          ]
+        ],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 50 H 80 C 70 40, 50 40, 45 50 H 10"
+        ],
+        "nuqat": [
+          [
+            60,
+            35
+          ]
+        ],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 50 H 80 C 70 40, 50 40, 45 50 C 10 50, 10 90, 50 80 C 80 75, 90 50, 90 50"
+        ],
+        "nuqat": [
+          [
+            60,
+            25
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+062F": {
+    "char": "د",
+    "name": "Dal",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 75 20 V 80 H 20"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "final": {
+        "rasm": [
+          "M 90 80 H 75 V 20"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0630": {
+    "char": "ذ",
+    "name": "Dhal",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 75 20 V 80 H 20"
+        ],
+        "nuqat": [
+          [
+            65,
+            15
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "final": {
+        "rasm": [
+          "M 90 80 H 75 V 20"
+        ],
+        "nuqat": [
+          [
+            65,
+            15
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0631": {
+    "char": "ر",
+    "name": "Ra",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 75 40 C 60 55, 50 75, 30 80"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "final": {
+        "rasm": [
+          "M 80 40 H 75 C 60 55, 50 75, 30 80"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0632": {
+    "char": "ز",
+    "name": "Zain",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 75 40 C 60 55, 50 75, 30 80"
+        ],
+        "nuqat": [
+          [
+            65,
+            30
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "final": {
+        "rasm": [
+          "M 80 40 H 75 C 60 55, 50 75, 30 80"
+        ],
+        "nuqat": [
+          [
+            65,
+            30
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0633": {
+    "char": "س",
+    "name": "Seen",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 80 50 C 75 40, 65 40, 60 50 C 55 40, 45 40, 40 50 C 20 55, 20 85, 50 80 C 80 75, 80 50, 80 50"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 80 50 C 75 40, 65 40, 60 50 C 55 40, 45 40, 40 50 H 10"
+        ],
+        "nuqat": [],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 50 H 80 C 75 40, 65 40, 60 50 C 55 40, 45 40, 40 50 H 10"
+        ],
+        "nuqat": [],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 50 H 80 C 75 40, 65 40, 60 50 C 55 40, 45 40, 40 50 C 20 55, 20 85, 50 80 C 80 75, 90 50, 90 50"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0634": {
+    "char": "ش",
+    "name": "Sheen",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 80 50 C 75 40, 65 40, 60 50 C 55 40, 45 40, 40 50 C 20 55, 20 85, 50 80 C 80 75, 80 50, 80 50"
+        ],
+        "nuqat": [
+          [
+            60,
+            30
+          ],
+          [
+            50,
+            35
+          ],
+          [
+            70,
+            35
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 80 50 C 75 40, 65 40, 60 50 C 55 40, 45 40, 40 50 H 10"
+        ],
+        "nuqat": [
+          [
+            60,
+            30
+          ],
+          [
+            50,
+            35
+          ],
+          [
+            70,
+            35
+          ]
+        ],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 50 H 80 C 75 40, 65 40, 60 50 C 55 40, 45 40, 40 50 H 10"
+        ],
+        "nuqat": [
+          [
+            60,
+            30
+          ],
+          [
+            50,
+            35
+          ],
+          [
+            70,
+            35
+          ]
+        ],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 50 H 80 C 75 40, 65 40, 60 50 C 55 40, 45 40, 40 50 C 20 55, 20 85, 50 80 C 80 75, 90 50, 90 50"
+        ],
+        "nuqat": [
+          [
+            60,
+            30
+          ],
+          [
+            50,
+            35
+          ],
+          [
+            70,
+            35
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0635": {
+    "char": "ص",
+    "name": "Sad",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 70 60 C 90 60, 90 30, 60 30 C 30 30, 30 60, 40 60 C 20 65, 20 85, 50 80 C 80 75, 70 60, 70 60"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 70 60 C 90 60, 90 30, 60 30 C 30 30, 30 60, 40 60 H 10"
+        ],
+        "nuqat": [],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 60 H 70 C 90 60, 90 30, 60 30 C 30 30, 30 60, 40 60 H 10"
+        ],
+        "nuqat": [],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 60 H 70 C 90 60, 90 30, 60 30 C 30 30, 30 60, 40 60 C 20 65, 20 85, 50 80 C 80 75, 90 60, 90 60"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0636": {
+    "char": "ض",
+    "name": "Dad",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 70 60 C 90 60, 90 30, 60 30 C 30 30, 30 60, 40 60 C 20 65, 20 85, 50 80 C 80 75, 70 60, 70 60"
+        ],
+        "nuqat": [
+          [
+            75,
+            20
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 70 60 C 90 60, 90 30, 60 30 C 30 30, 30 60, 40 60 H 10"
+        ],
+        "nuqat": [
+          [
+            75,
+            20
+          ]
+        ],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 60 H 70 C 90 60, 90 30, 60 30 C 30 30, 30 60, 40 60 H 10"
+        ],
+        "nuqat": [
+          [
+            75,
+            20
+          ]
+        ],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 60 H 70 C 90 60, 90 30, 60 30 C 30 30, 30 60, 40 60 C 20 65, 20 85, 50 80 C 80 75, 90 60, 90 60"
+        ],
+        "nuqat": [
+          [
+            75,
+            20
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0637": {
+    "char": "ط",
+    "name": "Tah",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 70 60 C 90 60, 90 30, 60 30 C 30 30, 30 60, 20 60",
+          "M 75 30 V 80"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 70 60 C 90 60, 90 30, 60 30 C 30 30, 30 60, 20 60 H 10",
+          "M 75 30 V 80"
+        ],
+        "nuqat": [],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 60 H 70 C 90 60, 90 30, 60 30 C 30 30, 30 60, 20 60 H 10",
+          "M 75 30 V 80"
+        ],
+        "nuqat": [],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 60 H 70 C 90 60, 90 30, 60 30 C 30 30, 30 60, 20 60",
+          "M 75 30 V 80"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0638": {
+    "char": "ظ",
+    "name": "Zah",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 70 60 C 90 60, 90 30, 60 30 C 30 30, 30 60, 20 60",
+          "M 75 30 V 80"
+        ],
+        "nuqat": [
+          [
+            80,
+            20
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 70 60 C 90 60, 90 30, 60 30 C 30 30, 30 60, 20 60 H 10",
+          "M 75 30 V 80"
+        ],
+        "nuqat": [
+          [
+            80,
+            20
+          ]
+        ],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 60 H 70 C 90 60, 90 30, 60 30 C 30 30, 30 60, 20 60 H 10",
+          "M 75 30 V 80"
+        ],
+        "nuqat": [
+          [
+            80,
+            20
+          ]
+        ],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 60 H 70 C 90 60, 90 30, 60 30 C 30 30, 30 60, 20 60",
+          "M 75 30 V 80"
+        ],
+        "nuqat": [
+          [
+            80,
+            20
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0639": {
+    "char": "ع",
+    "name": "Ayn",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 50 30 A 10 10 0 0 0 40 40",
+          "M 50 45 A 15 15 0 0 0 30 60"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 50 30 A 10 10 0 0 0 40 40",
+          "M 50 45 A 15 15 0 0 0 30 60 L 10 60"
+        ],
+        "nuqat": [],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 50 H 70",
+          "M 60 35 A 8 8 0 0 0 52 43",
+          "M 60 48 A 12 12 0 0 0 45 60",
+          "M 40 60 H 10"
+        ],
+        "nuqat": [],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 50 H 70",
+          "M 60 35 A 10 10 0 0 0 50 45",
+          "M 60 50 A 15 15 0 0 0 40 65"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+063A": {
+    "char": "غ",
+    "name": "Ghayn",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 50 30 A 10 10 0 0 0 40 40",
+          "M 50 45 A 15 15 0 0 0 30 60"
+        ],
+        "nuqat": [
+          [
+            50,
+            20
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 50 30 A 10 10 0 0 0 40 40",
+          "M 50 45 A 15 15 0 0 0 30 60 L 10 60"
+        ],
+        "nuqat": [
+          [
+            50,
+            20
+          ]
+        ],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 50 H 70",
+          "M 60 35 A 8 8 0 0 0 52 43",
+          "M 60 48 A 12 12 0 0 0 45 60",
+          "M 40 60 H 10"
+        ],
+        "nuqat": [
+          [
+            60,
+            25
+          ]
+        ],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 50 H 70",
+          "M 60 35 A 10 10 0 0 0 50 45",
+          "M 60 50 A 15 15 0 0 0 40 65"
+        ],
+        "nuqat": [
+          [
+            60,
+            25
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0641": {
+    "char": "ف",
+    "name": "Faa",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 60 30 C 75 30, 75 45, 60 45 C 45 45, 45 30, 60 30 M 70 40 C 60 80, 20 80, 20 40"
+        ],
+        "nuqat": [
+          [
+            60,
+            20
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 60 30 C 75 30, 75 45, 60 45 C 45 45, 45 30, 60 30 M 70 40 L 10 40"
+        ],
+        "nuqat": [
+          [
+            60,
+            20
+          ]
+        ],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 40 H 80 C 80 25, 65 25, 65 40 H 10"
+        ],
+        "nuqat": [
+          [
+            70,
+            25
+          ]
+        ],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 40 H 80 C 80 25, 65 25, 65 40 C 60 80, 20 80, 20 40"
+        ],
+        "nuqat": [
+          [
+            60,
+            25
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0642": {
+    "char": "ق",
+    "name": "Qaaf",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 60 30 C 75 30, 75 45, 60 45 C 45 45, 45 30, 60 30 M 70 40 C 60 80, 20 80, 20 40"
+        ],
+        "nuqat": [
+          [
+            55,
+            20
+          ],
+          [
+            65,
+            20
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 60 30 C 75 30, 75 45, 60 45 C 45 45, 45 30, 60 30 M 70 40 L 10 40"
+        ],
+        "nuqat": [
+          [
+            55,
+            20
+          ],
+          [
+            65,
+            20
+          ]
+        ],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 40 H 80 C 80 25, 65 25, 65 40 H 10"
+        ],
+        "nuqat": [
+          [
+            65,
+            25
+          ],
+          [
+            75,
+            25
+          ]
+        ],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 40 H 80 C 80 25, 65 25, 65 40 C 60 80, 20 80, 20 40"
+        ],
+        "nuqat": [
+          [
+            55,
+            25
+          ],
+          [
+            65,
+            25
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0643": {
+    "char": "ك",
+    "name": "Kaaf",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 80 20 L 70 20 L 30 80 L 20 80",
+          "M 60 40 C 55 50, 45 50, 40 60"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 80 80 L 80 20 L 40 20 H 10"
+        ],
+        "nuqat": [],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 80 H 80 V 20 H 40 V 80 H 10"
+        ],
+        "nuqat": [],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 80 H 80 V 20 L 30 80 H 20"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0644": {
+    "char": "ل",
+    "name": "Laam",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 70 20 V 60 C 60 80, 30 80, 30 60"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 70 20 V 80 H 10"
+        ],
+        "nuqat": [],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 80 H 70 V 20 H 50"
+        ],
+        "nuqat": [],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 80 H 70 V 20 C 60 80, 30 80, 30 60"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0645": {
+    "char": "م",
+    "name": "Meem",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 70 50 C 70 40, 60 30, 50 40 C 40 50, 40 60, 50 60 L 50 80"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 70 50 C 70 40, 60 30, 50 40 C 40 50, 40 60, 50 60 H 10"
+        ],
+        "nuqat": [],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 60 H 80 C 80 50, 70 40, 60 50 C 50 60, 50 70, 60 70 H 10"
+        ],
+        "nuqat": [],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 60 C 90 50, 80 40, 70 50 C 60 60, 60 70, 70 70 V 80"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0646": {
+    "char": "ن",
+    "name": "Noon",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 80 50 C 60 80, 30 80, 20 50"
+        ],
+        "nuqat": [
+          [
+            50,
+            40
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 80 70 C 70 85, 40 85, 30 70 H 10"
+        ],
+        "nuqat": [
+          [
+            55,
+            60
+          ]
+        ],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 70 H 70 C 65 85, 45 85, 40 70 H 10"
+        ],
+        "nuqat": [
+          [
+            55,
+            60
+          ]
+        ],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 70 H 70 C 60 95, 30 95, 20 70"
+        ],
+        "nuqat": [
+          [
+            50,
+            60
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0647": {
+    "char": "ه",
+    "name": "Ha",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 50 30 C 75 30, 75 70, 50 70 C 25 70, 25 30, 50 30"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 80 80 V 50 C 80 30, 60 30, 60 50 C 60 70, 40 70, 40 50 H 10"
+        ],
+        "nuqat": [],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 80 L 75 50 L 25 80 L 10 50"
+        ],
+        "nuqat": [],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 80 H 70 C 70 60, 80 50, 70 50"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0648": {
+    "char": "و",
+    "name": "Waw",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 60 30 C 75 30, 75 45, 60 45 C 45 45, 45 30, 60 30 M 60 45 C 50 75, 30 80, 20 70"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "final": {
+        "rasm": [
+          "M 90 45 H 70 M 60 30 C 75 30, 75 45, 60 45 C 45 45, 45 30, 60 30 M 60 45 C 50 75, 30 80, 20 70"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+0649": {
+    "char": "ى",
+    "name": "Alef Maqsura",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 70 40 C 60 20, 20 20, 30 50 C 40 80, 80 80, 80 50"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      },
+      "final": {
+        "rasm": [
+          "M 90 70 H 80 C 70 90, 20 90, 30 60"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+FEFB": {
+    "char": "ﻻ",
+    "name": "Lam-Alef Ligature",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 70 20 L 30 80",
+          "M 30 20 L 70 80"
+        ],
+        "nuqat": [],
+        "label": "Isolated"
+      }
+    }
+  },
+  "U+FEFC": {
+    "char": "ﻼ",
+    "name": "Final Lam-Alef Ligature",
+    "forms": {
+      "final": {
+        "rasm": [
+          "M 90 80 H 80 L 40 20",
+          "M 80 20 L 40 80"
+        ],
+        "nuqat": [],
+        "label": "Final"
+      }
+    }
+  },
+  "U+064A": {
+    "char": "ي",
+    "name": "Yaa",
+    "forms": {
+      "isolated": {
+        "rasm": [
+          "M 70 40 C 60 20, 20 20, 30 50 C 40 80, 80 80, 80 50"
+        ],
+        "nuqat": [
+          [
+            45,
+            65
+          ],
+          [
+            55,
+            65
+          ]
+        ],
+        "label": "Isolated"
+      },
+      "initial": {
+        "rasm": [
+          "M 80 70 C 70 85, 40 85, 30 70 H 10"
+        ],
+        "nuqat": [
+          [
+            50,
+            90
+          ],
+          [
+            60,
+            90
+          ]
+        ],
+        "label": "Initial"
+      },
+      "medial": {
+        "rasm": [
+          "M 90 70 H 70 C 65 85, 45 85, 40 70 H 10"
+        ],
+        "nuqat": [
+          [
+            50,
+            90
+          ],
+          [
+            60,
+            90
+          ]
+        ],
+        "label": "Medial"
+      },
+      "final": {
+        "rasm": [
+          "M 90 70 H 80 C 70 90, 20 90, 30 60 C 40 80, 80 80, 80 50"
+        ],
+        "nuqat": [
+          [
+            45,
+            75
+          ],
+          [
+            55,
+            75
+          ]
+        ],
+        "label": "Final"
+      }
+    }
+  }
+}

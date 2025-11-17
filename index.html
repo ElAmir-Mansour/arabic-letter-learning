@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تطبيق تفاعلي لتعليم الحروف العربية باستخدام الذكاء الاصطناعي مع نظام نقاط وتتبع التقدم">
+    <meta name="theme-color" content="#B85253">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="معلّم الخط">
+    
+    <title>معلّم الخط العربي - Athar | AI Arabic Letter Learning</title>
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="Athar logo.png">
+    <link rel="apple-touch-icon" href="Athar logo.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-900" dir="rtl">
+    <script>
+        // Apply theme from local storage to prevent FOUC
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <div class="container mx-auto max-w-7xl p-3 md:p-4">
+        
+        <header class="text-center mb-4 relative">
+            <div class="flex items-center justify-center gap-4 mb-3">
+                <img src="Athar logo.png" alt="Athar Logo" class="h-16 md:h-20" onerror="this.style.display='none'">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-2" style="font-family: 'Traditional Arabic', 'Arabic Typesetting', serif; color: #B85253;">✨ معلّم الخط العربي ✨</h1>
+                    <p class="text-lg md:text-xl font-semibold" style="color: #576B7C;">تعلّم كتابة الحروف بذكاء اصطناعي 🎯</p>
+                </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="max-w-2xl mx-auto mb-3 p-3 rounded-xl border-2" style="background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%); border-color: #BDBAB2;">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm font-bold" style="color: #B85253;">🎯 التقدم الكلي</span>
+                    <span id="progress-text" class="text-sm font-bold" style="color: #576B7C;">0/28</span>
+                </div>
+                <div class="w-full h-4 bg-gray-200 rounded-full overflow-hidden">
+                    <div id="progress-bar" class="h-full transition-all duration-500" style="background: linear-gradient(90deg, #B85253 0%, #576B7C 100%); width: 0%;"></div>
+                </div>
+                <div class="flex justify-between items-center mt-2">
+                    <span class="text-xs" style="color: #576B7C;">⭐ نجوم: <span id="total-stars" class="font-bold">0</span></span>
+                    <span class="text-xs" style="color: #576B7C;">🏆 نقاط: <span id="total-points" class="font-bold">0</span></span>
+                    <button id="stats-button" class="text-xs px-2 py-1 rounded-lg" style="background-color: #576B7C; color: white;">📊 الإحصائيات</button>
+                </div>
+            </div>
+            
+            <button id="theme-toggle" class="absolute top-2 left-2 p-2 rounded-full hover:bg-opacity-20 transition-colors" style="color: #576B7C; background-color: rgba(87, 107, 124, 0.1);">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" role="img">
+                    <title>تبديل الوضع الليلي</title>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+            </button>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 bg-white p-3 md:p-4 rounded-2xl shadow-xl max-h-[calc(100vh-140px)] overflow-hidden">
+
+            <div class="overflow-y-auto max-h-[calc(100vh-160px)] pr-2">
+                <h2 class="text-xl md:text-2xl font-bold mb-3 pb-2" style="color: #B85253; border-bottom: 2px solid #BDBAB2;">
+                    📚 اختر الحرف
+                </h2>
+                
+                <div class="mb-4">
+                    <div class="flex items-center justify-between mb-2">
+                        <label for="letter-select" class="block text-base font-semibold" style="color: #576B7C;">🔤 الحرف:</label>
+                        <span id="letter-stars" class="text-sm"></span>
+                    </div>
+                    <select id="letter-select" class="w-full p-2 text-lg border-2 rounded-xl bg-white transition-all" style="border-color: #BDBAB2;" onmouseover="this.style.borderColor='#B85253'" onmouseout="this.style.borderColor='#BDBAB2'">
+                        <option value="U+0621">ء - الهمزة</option>
+                        <option value="U+0622">آ - الألف بالمدة</option>
+                        <option value="U+0623">أ - الألف بالهمزة فوقها</option>
+                        <option value="U+0624">ؤ - الواو بالهمزة</option>
+                        <option value="U+0625">إ - الألف بالهمزة تحتها</option>
+                        <option value="U+0626">ئ - الياء بالهمزة</option>
+                        <option value="U+0627">ا - الألف</option>
+                        <option value="U+0628" selected>ب - الباء</option>
+                        <option value="U+0629">ة - التاء المربوطة</option>
+                        <option value="U+062A">ت - التاء</option>
+                        <option value="U+062B">ث - الثاء</option>
+                        <option value="U+062C">ج - الجيم</option>
+                        <option value="U+062D">ح - الحاء</option>
+                        <option value="U+062E">خ - الخاء</option>
+                        <option value="U+062F">د - الدال</option>
+                        <option value="U+0630">ذ - الذال</option>
+                        <option value="U+0631">ر - الراء</option>
+                        <option value="U+0632">ز - الزاي</option>
+                        <option value="U+0633">س - السين</option>
+                        <option value="U+0634">ش - الشين</option>
+                        <option value="U+0635">ص - الصاد</option>
+                        <option value="U+0636">ض - الضاد</option>
+                        <option value="U+0637">ط - الطاء</option>
+                        <option value="U+0638">ظ - الظاء</option>
+                        <option value="U+0639">ع - العين</option>
+                        <option value="U+063A">غ - الغين</option>
+                        <option value="U+0641">ف - الفاء</option>
+                        <option value="U+0642">ق - القاف</option>
+                        <option value="U+0643">ك - الكاف</option>
+                        <option value="U+0644">ل - اللام</option>
+                        <option value="U+0645">م - الميم</option>
+                        <option value="U+0646">ن - النون</option>
+                        <option value="U+0647">ه - الهاء</option>
+                        <option value="U+0648">و - الواو</option>
+                        <option value="U+0649">ى - الألف المقصورة</option>
+                        <option value="U+064A">ي - الياء</option>
+                        <option value="U+FEFB">لا - اللام ألف</option>
+                        <option value="U+FEFC">لا - اللام ألف النهائية</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-base font-semibold mb-2" style="color: #576B7C;">📍 الشكل:</label>
+                    <div id="context-options" class="flex flex-wrap justify-center gap-2 text-sm">
+                        </div>
+                </div>
+
+                <div class="mb-3 p-3 rounded-xl border-2" style="background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%); border-color: #BDBAB2;">
+                    <h3 class="text-lg font-bold mb-2 text-center" style="color: #B85253;">👁️ الطريقة الصحيحة</h3>
+                    <div class="w-full h-48 flex items-center justify-center p-4">
+                        <svg id="svg-container" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" style="max-width: 200px; max-height: 200px;">
+                            </svg>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mt-3">
+                        <button id="draw-button" class="w-full text-white font-bold py-2 px-3 rounded-xl active:scale-95 text-base shadow-lg hover:shadow-xl transition-all" style="background: linear-gradient(135deg, #B85253 0%, #9a4344 100%);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                            ▶️ شاهد
+                        </button>
+                        <button id="audio-button" class="w-full text-white font-bold py-2 px-3 rounded-xl active:scale-95 text-base shadow-lg hover:shadow-xl transition-all" style="background: linear-gradient(135deg, #576B7C 0%, #485967 100%);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                            🔊 اسمع
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overflow-y-auto max-h-[calc(100vh-160px)] pr-2">
+                <h2 class="text-xl md:text-2xl font-bold mb-3 pb-2" style="color: #576B7C; border-bottom: 2px solid #BDBAB2;">
+                    ✍️ ارسم الحرف
+                </h2>
+                
+                <div class="mb-3 p-3 rounded-xl border-2" style="background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%); border-color: #BDBAB2;">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="text-lg font-bold text-center" style="color: #576B7C;">🎨 لوحة التدريب</h3>
+                        <div class="flex items-center gap-2">
+                            <label class="flex items-center text-xs cursor-pointer" style="color: #576B7C;">
+                                <input type="checkbox" id="timer-mode" class="mr-1">
+                                ⏱️ تحدي الوقت
+                            </label>
+                            <button id="compare-button" class="text-xs px-2 py-1 rounded-lg" style="background-color: #576B7C; color: white;">👁️ مقارنة</button>
+                        </div>
+                    </div>
+                    <div id="timer-display" class="hidden text-center text-2xl font-bold mb-2 animate-pulse" style="color: #B85253;">⏱️ <span id="timer-value">15</span>s</div>
+                    <div class="w-full relative rounded-xl overflow-hidden">
+                        <canvas id="practice-pad"></canvas>
+                        <canvas id="overlay-canvas" class="absolute top-0 left-0 pointer-events-none" style="display: none;"></canvas>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 mt-3">
+                        <button id="analyze-button" class="w-full text-white font-bold py-2 px-2 rounded-xl transition active:scale-95 shadow-lg text-sm" style="background: linear-gradient(135deg, #B85253 0%, #9a4344 100%);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                            🔍 تحليل
+                        </button>
+                        <button id="hint-button" class="w-full text-white font-bold py-2 px-2 rounded-xl transition active:scale-95 shadow-lg text-sm" style="background: linear-gradient(135deg, #576B7C 0%, #485967 100%);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                            💡 تلميح
+                        </button>
+                        <button id="clear-button" class="w-full text-white font-bold py-2 px-2 rounded-xl transition active:scale-95 shadow-lg text-sm" style="background: linear-gradient(135deg, #BDBAB2 0%, #a8a59d 100%);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                            🗑️ مسح
+                        </button>
+                    </div>
+                </div>
+
+                <div class="p-3 rounded-xl border-2" style="background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%); border-color: #BDBAB2;">
+                    <h3 class="text-lg font-bold mb-2 text-center" style="color: #B85253;">💡 التقييم</h3>
+                    <div id="feedback-panel" class="w-full min-h-[4rem] h-auto bg-white p-4 rounded-xl flex flex-col items-center justify-center text-center font-semibold transition-all shadow-inner border-2 text-base" style="color: #576B7C; border-color: #BDBAB2;" aria-live="polite">
+                        🎯 جاهز للكتابة!
+                    </div>
+                    <div id="stars-display" class="text-center text-3xl mt-2 hidden animate-bounce"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Statistics Modal -->
+        <div id="stats-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" style="backdrop-filter: blur(4px);">
+            <div class="bg-white rounded-2xl p-6 max-w-2xl w-full mx-4 shadow-2xl transform transition-all" style="animation: slideIn 0.3s ease-out;">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-bold" style="color: #B85253;">📊 إحصائيات التقدم</h2>
+                    <button id="close-stats" class="text-3xl" style="color: #576B7C;">&times;</button>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                    <div class="p-4 rounded-xl text-center" style="background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%); border: 2px solid #BDBAB2;">
+                        <div class="text-3xl font-bold" style="color: #B85253;" id="stats-completed">0</div>
+                        <div class="text-sm" style="color: #576B7C;">حروف مكتملة</div>
+                    </div>
+                    <div class="p-4 rounded-xl text-center" style="background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%); border: 2px solid #BDBAB2;">
+                        <div class="text-3xl font-bold" style="color: #B85253;" id="stats-total-stars">0</div>
+                        <div class="text-sm" style="color: #576B7C;">⭐ نجوم</div>
+                    </div>
+                    <div class="p-4 rounded-xl text-center" style="background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%); border: 2px solid #BDBAB2;">
+                        <div class="text-3xl font-bold" style="color: #B85253;" id="stats-avg-score">0%</div>
+                        <div class="text-sm" style="color: #576B7C;">متوسط الدقة</div>
+                    </div>
+                    <div class="p-4 rounded-xl text-center" style="background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%); border: 2px solid #BDBAB2;">
+                        <div class="text-3xl font-bold" style="color: #B85253;" id="stats-time">0</div>
+                        <div class="text-sm" style="color: #576B7C;">دقائق تدريب</div>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <h3 class="text-lg font-bold mb-2" style="color: #576B7C;">🏆 الحروف المكتملة</h3>
+                    <div id="completed-letters" class="flex flex-wrap gap-2 max-h-40 overflow-y-auto p-2 rounded-xl" style="background: #f5f3f0;">
+                        <span class="text-sm" style="color: #BDBAB2;">لم تكمل أي حرف بعد</span>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <button id="reset-progress" class="flex-1 py-2 px-4 rounded-xl text-white font-bold" style="background: linear-gradient(135deg, #B85253 0%, #9a4344 100%);">
+                        🔄 إعادة تعيين التقدم
+                    </button>
+                    <button id="export-stats" class="flex-1 py-2 px-4 rounded-xl text-white font-bold" style="background: linear-gradient(135deg, #576B7C 0%, #485967 100%);">
+                        📤 تصدير الإحصائيات
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>

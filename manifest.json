@@ -1,0 +1,37 @@
+{
+  "name": "معلّم الخط العربي - Athar",
+  "short_name": "معلّم الخط",
+  "description": "تطبيق تفاعلي لتعليم الحروف العربية باستخدام الذكاء الاصطناعي",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f3f0",
+  "theme_color": "#B85253",
+  "orientation": "any",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "Athar logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "Athar logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "بدء التدريب",
+      "short_name": "تدريب",
+      "description": "ابدأ تدريب الحروف مباشرة",
+      "url": "/",
+      "icons": []
+    }
+  ]
+}
