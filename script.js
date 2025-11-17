@@ -684,11 +684,14 @@
         
         function resetAnimation() {
             const paths = document.querySelectorAll('.letter-stroke-demo');
+            console.log('Resetting animation, found paths:', paths.length);
             paths.forEach(path => {
                 const pathLength = path.getTotalLength();
                 path.style.transition = 'none';
-                path.style.strokeDashoffset = pathLength;
-                path.style.strokeDasharray = pathLength;
+                path.style.strokeDashoffset = pathLength + 'px';
+                path.style.strokeDasharray = pathLength + 'px';
+                path.classList.remove('draw'); // Remove the draw class
+                console.log('Reset path, strokeDashoffset set to:', pathLength);
             });
         }
 
@@ -696,27 +699,44 @@
         let isAnimating = false; // Track animation state
         
         drawButton.addEventListener('click', () => {
-            // If already fully drawn, don't restart
             const paths = document.querySelectorAll('.letter-stroke-demo');
             const firstPath = paths[0];
-            const currentOffset = firstPath ? parseFloat(firstPath.style.strokeDashoffset) : null;
             
-            // Check if animation is done (offset is 0) and not animating
-            if (currentOffset === 0 && !isAnimating) {
-                speak('لإعادة المشاهدة، اضغط مسح ثم شاهد', 'ar-SA'); // "To replay, click Clear then Watch"
+            console.log('Draw button clicked');
+            console.log('Paths found:', paths.length);
+            console.log('First path offset:', firstPath ? firstPath.style.strokeDashoffset : 'none');
+            console.log('isAnimating:', isAnimating);
+            
+            if (!firstPath) {
+                console.error('No paths found!');
                 return;
             }
             
-            if (isAnimating) return; // Prevent multiple animations
+            const currentOffset = parseFloat(firstPath.style.strokeDashoffset);
+            console.log('Current offset (number):', currentOffset);
+            
+            // Check if animation is done (offset is 0) and not animating
+            if (currentOffset === 0 && !isAnimating) {
+                console.log('Already drawn, telling user to clear');
+                speak('لإعادة المشاهدة، اضغط مسح ثم شاهد', 'ar-SA');
+                return;
+            }
+            
+            if (isAnimating) {
+                console.log('Already animating, ignoring');
+                return;
+            }
+            
             isAnimating = true;
+            console.log('Starting animation');
             
             speak('شاهد طريقة الكتابة', 'ar-SA');
             let totalDelay = 0;
             paths.forEach((path) => {
                 const pathLength = path.getTotalLength();
-                const duration = Math.max(800, pathLength * 4); // Duration based on length
+                const duration = Math.max(800, pathLength * 4);
                 path.style.transition = 'none';
-                path.style.strokeDashoffset = pathLength;
+                path.style.strokeDashoffset = pathLength + 'px';
                 path.getBoundingClientRect(); // Force reflow
                 path.style.transition = `stroke-dashoffset ${duration / 1000}s ease-in-out`;
                 setTimeout(() => {
@@ -724,11 +744,12 @@
                 }, totalDelay);
                 totalDelay += duration;
             });
-            // Keep the letter visible after animation completes
+            
             setTimeout(() => {
+                console.log('Animation complete');
                 paths.forEach(path => {
-                    path.style.strokeDashoffset = '0'; // Keep fully drawn
-                    path.style.transition = 'none'; // Remove transition
+                    path.style.strokeDashoffset = '0px';
+                    path.style.transition = 'none';
                 });
                 isAnimating = false;
             }, totalDelay + 500);
