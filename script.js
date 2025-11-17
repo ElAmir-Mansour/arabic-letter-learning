@@ -680,9 +680,21 @@
         }
 
         // --- EVENT LISTENERS & INITIALIZATION ---
+        let isAnimating = false; // Track animation state
+        
         drawButton.addEventListener('click', () => {
-            speak('شاهد طريقة الكتابة', 'ar-SA');
+            // If already fully drawn, don't restart
             const paths = document.querySelectorAll('.letter-stroke-demo');
+            const firstPath = paths[0];
+            if (firstPath && firstPath.style.strokeDashoffset === '0' && !isAnimating) {
+                speak('الحرف مرسوم بالفعل', 'ar-SA'); // "Letter already drawn"
+                return;
+            }
+            
+            if (isAnimating) return; // Prevent multiple animations
+            isAnimating = true;
+            
+            speak('شاهد طريقة الكتابة', 'ar-SA');
             let totalDelay = 0;
             paths.forEach((path) => {
                 const pathLength = path.getTotalLength();
@@ -702,6 +714,7 @@
                     path.style.strokeDashoffset = '0'; // Keep fully drawn
                     path.style.transition = 'none'; // Remove transition
                 });
+                isAnimating = false;
             }, totalDelay + 500);
         });
 
