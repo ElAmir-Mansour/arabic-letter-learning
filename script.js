@@ -699,7 +699,10 @@
             // If already fully drawn, don't restart
             const paths = document.querySelectorAll('.letter-stroke-demo');
             const firstPath = paths[0];
-            if (firstPath && firstPath.style.strokeDashoffset === '0' && !isAnimating) {
+            const currentOffset = firstPath ? parseFloat(firstPath.style.strokeDashoffset) : null;
+            
+            // Check if animation is done (offset is 0) and not animating
+            if (currentOffset === 0 && !isAnimating) {
                 speak('لإعادة المشاهدة، اضغط مسح ثم شاهد', 'ar-SA'); // "To replay, click Clear then Watch"
                 return;
             }
@@ -707,7 +710,7 @@
             if (isAnimating) return; // Prevent multiple animations
             isAnimating = true;
             
-            speak('شاهِدْ طريقةْ الكِتَابة', 'ar-SA');
+            speak('شاهد طريقة الكتابة', 'ar-SA');
             let totalDelay = 0;
             paths.forEach((path) => {
                 const pathLength = path.getTotalLength();
